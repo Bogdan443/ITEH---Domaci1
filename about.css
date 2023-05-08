@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none; 
+}
+
+body{
+    background-color: #622F22;
+    color: #c39057;
+}
+
+.container-nav{
+    background: #622F22;
+}
+
+.container-nav ul{
+    display: grid;
+    grid-gap: 15px;
+    padding: 0.5rem;
+    list-style: none;
+    grid-template-columns: 0.05fr 0.15fr 0.05fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.05fr 0.05fr 0.1fr;
+    align-items: center;
+}
+
+.container-nav a{
+    background-color: #622F22;
+    display: block;
+    text-decoration: none;
+    padding: 0.4rem;
+    text-align: center;
+    color: #c39057;
+    text-transform: uppercase;
+    font-size: 1rem;        
+}
+
+
+.container-nav a:after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: #622F22;
+    display: block;
+    transition: .5s ease-in-out;
+}
+
+.container-nav a:hover::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: #622F22;
+    display: block;
+}
+
+.container1{
+    display: grid;
+    grid-template-columns: 0.15fr 0.7fr 0.15fr;
+}
+
+.container2{
+    display: grid;
+    grid-template-columns: 0.1fr 0.4fr 0.4fr 0.1fr;
+    background-color: #622F22;
+    color: #c39057;
+}
+
+.line{
+    background-color: #c39057;
+    height: 0.5px;
+    
+}
+
+.container5{
+    background-color: #622F22;
+    display: grid;
+    grid-template-columns: 0.1fr 0.8fr 0.1fr;
+    padding-top: 10px;
+}
+
+.container4{
+    background-color: #622F22;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    color: #c39057;
+}
+
+.container4 h2{
+    text-align: center;
+}
+
+.container4 p{
+    text-align: justify;
+}
+
+.container3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #622F22;
+}
+
+
+footer{
+    background-color: #a7763f;
+    text-align: center;
+    color: #622F22;
+    height: 30px;
+    align-items: center;
+}
+
+
+
+
+.to-top{
+    background: white;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #622F22;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.user{
+
+    font-size: 24px;
+}
