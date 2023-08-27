@@ -14,8 +14,11 @@ function setComments($conn) {
 }
 
 
+
+
+
 function getComments($conn) {
-    $sql = "SELECT * FROM comments LIMIT 3";
+    $sql = "SELECT * FROM comments LIMIT 2";
     $result = $conn->query($sql);
     while ($row = $result->fetch_assoc()) {
         $id = $row['uid'];
@@ -60,7 +63,7 @@ function editComment($conn){
 
         $sql = "UPDATE comments SET message='$message' WHERE cid='$cid'";
         $result = $conn->query($sql);
-        header("Location: glenfiddich.php");
+        header("Location: glenfiddich207.php");
     }
 
 
@@ -73,7 +76,7 @@ function deleteComments($conn) {
 
         $sql = "DELETE FROM comments WHERE cid='$cid'";
         $result = $conn->query($sql);
-        header("Location: glenfiddich.php");
+        header("Location: glenfiddich207.php");
     }
 }
 
@@ -87,11 +90,11 @@ function getLogin($conn) {
     if(mysqli_num_rows($result) > 0){
         if ($row = $result->fetch_assoc()) {
               $_SESSION['id'] = $row['id']; 
-              header("Location: glenfiddich.php?loginsuccess"); 
+              header("Location: glenfiddich207.php?loginsuccess"); 
               exit(); 
             }
     } else{
-        header("Location: glenfiddich.php?loginfailed"); 
+        header("Location: glenfiddich207.php?loginfailed"); 
         exit();
     }
 
@@ -101,7 +104,7 @@ function userLogout() {
     if(isset($_POST['logoutSubmit'])){
         session_start();
         session_destroy();
-        header("Location: glenfiddich.php");
+        header("Location: glenfiddich207.php");
         exit();
     }
 }    
